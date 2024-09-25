@@ -14,3 +14,22 @@ Ex5: SELECT code FROM ville WHERE nom = 'Caullery'; le code est 59140.
 Ex6: SELECT * FROM evolution WHERE code = '59350';
 Ex7: SELECT * FROM evolution WHERE code = '59350' ORDER BY effectif DESC;
 Ex8: SELECT code FROM evolution WHERE effectif > 2000;
+Ex9: SELECT DISTINCT ville.nom FROM ville INNER JOIN evolution ON ville.code = evolution.code WHERE evolution.effectif > 2000;
+Le resultat est Maubeuge, Tourcoing, Dunkerque, Marcq-en-Baroeul, Halluin, Roubaix, Wattrelos, Coudekerque-Branche, Douai, Lambersart, Valenciennes, Lille               
+Grande-Synthe       
+Bailleul            
+Sin-le-Noble        
+Cambrai             
+Ronchin             
+Faches-Thumesnil    
+Loos                
+Mons-en-Baroeul     
+Croix               
+Villeneuve-d'Ascq   
+La Madeleine        
+Denain              
+Hazebrouck          
+Armentières         
+Wasquehal           
+Hem                 
+Saint-Amand-les-Eaux
