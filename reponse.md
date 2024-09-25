@@ -12,4 +12,5 @@ Ex3: SELECT DISTINCT categorie FROM evolution;
 Ex4: SELECT nom, code FROM ville WHERE code = '59350'; le nom de la ville est lille.
 Ex5: SELECT code FROM ville WHERE nom = 'Caullery'; le code est 59140.
 Ex6: SELECT * FROM evolution WHERE code = '59350';
-Ex7: SELECT * FROM evolution WHERE code = '59350';
+Ex7: SELECT * FROM evolution WHERE code = '59350' ORDER BY effectif DESC;
+Ex8: SELECT code FROM evolution WHERE effectif > 2000;

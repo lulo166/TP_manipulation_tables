@@ -1,0 +1,1 @@
+PRAGMA table_info(nom de la table);
