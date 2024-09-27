@@ -14,22 +14,9 @@ Ex5: SELECT code FROM ville WHERE nom = 'Caullery'; le code est 59140.
 Ex6: SELECT * FROM evolution WHERE code = '59350';
 Ex7: SELECT * FROM evolution WHERE code = '59350' ORDER BY effectif DESC;
 Ex8: SELECT code FROM evolution WHERE effectif > 2000;
-Ex9: SELECT DISTINCT ville.nom FROM ville INNER JOIN evolution ON ville.code = evolution.code WHERE evolution.effectif > 2000;
-Le resultat est Maubeuge, Tourcoing, Dunkerque, Marcq-en-Baroeul, Halluin, Roubaix, Wattrelos, Coudekerque-Branche, Douai, Lambersart, Valenciennes, Lille               
-Grande-Synthe       
-Bailleul            
-Sin-le-Noble        
-Cambrai             
-Ronchin             
-Faches-Thumesnil    
-Loos                
-Mons-en-Baroeul     
-Croix               
-Villeneuve-d'Ascq   
-La Madeleine        
-Denain              
-Hazebrouck          
-Armentières         
-Wasquehal           
-Hem                 
-Saint-Amand-les-Eaux
+Ex9: SELECT ville.nom FROM ville INNER JOIN evolution ON ville.code = evolution.code WHERE evolution.effectif > 2000;
+Ex10: SELECT DISTINCT ville.nom FROM ville INNER JOIN evolution ON ville.code = evolution.code WHERE evolution.effectif > 2000;
+Le resultat est Maubeuge, Tourcoing, Dunkerque, Marcq-en-Baroeul, Halluin, Roubaix, Wattrelos, Coudekerque-Branche, Douai, Lambersart, Valenciennes, Lille, Grande-Synthe, Bailleul, Sin-le-Noble, Cambrai, Ronchin, Faches-Thumesnil, Loos, Mons-en-Baroeul, Croix, Villeneuve-d'Ascq, La Madeleine, Denain, Hazebrouck, Armentières, Wasquehal, Hem, Saint-Amand-les-Eaux.
+Ex11: Pour faire ca on utilise la fonction COUNT, ce qui donne la requete SELECT COUNT(ville.nom) FROM ville INNER JOIN evolution ON ville.code = evolution.code WHERE evolution.effectif > 2000;
+La requete donne 140 resultat, et si on soustrait par le nombre de resultat sans doublon, qui est 29, on se retrouve avec 111, qui est le nombre de doublons.
+Ex12: #pas fini#  SELECT effectif FROM evolution WHERE genre = 'Femmes' AND categorie = 'Agriculteurs Exploitants';
